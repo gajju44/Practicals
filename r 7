@@ -1,0 +1,6 @@
+# to load graphics package
+library("graphics")
+#to load dataset
+data(mtcars)
+#to analyze structure of dataset
+str(mtcars)
