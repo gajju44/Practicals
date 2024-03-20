@@ -1,6 +1,34 @@
-# to load graphics package
+#To load graphics
 library("graphics")
-#to load dataset
+
+#To load datasets package
+library("datasets")
+
+#To load mtcars datasets
 data(mtcars)
-#to analyze structure of dataset
+
+#To analyse structure of datasets
 str(mtcars)
+
+#plot(x,y,type,main,sub,xlab,ylab,asp,col,.....)
+
+#To plot mpg(miles/Gallon) vs no. of cars
+
+plot(mtcars$mpg,xlab="Number of cars",ylab="Miles per Gallons",col="green")
+#To find relation between hp(Horse Power)&mpg(Miles/Gallon)
+
+plot(mtcars$hp,mtcars$mpg,xlab="Horse POwer",ylab="Miles per Gallons",type="h",col="blue")
+
+#To draw a barplot of hp(Horse Power)
+#Horizontal
+barplot(mtcars$hp,xlab="Horse Power",col="cyan",horiz=TRUE)
+barplot(mtcars$hp,xlab="Horse Power",col="orange",horiz=FALSE)
+
+
+#histogram
+#to find histogram for mpg
+hist(mtcars$mpg,xlab="mpg",main="histogram for mpg",col="yellow")
+
+#boxplot
+#to draw barplot fordisp(displacement) & hp
+boxplot(mtcars[3:4])
